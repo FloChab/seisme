@@ -29,7 +29,7 @@ export const Mapheader = ({ seismes }) => {
 
 
   const onLoad = () => {
-    console.log('onLoad')
+    //console.log('onLoad')
     if (seismes.length > 1) {
       setSeismesGEOJSON(sourceSeismes(seismes))
       let newCoord = []
@@ -38,7 +38,6 @@ export const Mapheader = ({ seismes }) => {
       }
 
       const [minLng, minLat, maxLng, maxLat] = bbox(turf.lineString(newCoord));
-      console.log(mapRef)
       mapRef.current.getMap().fitBounds(
         [
           [minLng, minLat],
@@ -106,7 +105,6 @@ export const Mapheader = ({ seismes }) => {
 
         <Source id="source-plates" type="geojson" data={sourcePlates}>
           <Layer {...layerPlatesBg} />
-          <Layer {...layerPlatesBgHover} filter={filter} />
           <Layer {...layerPlatesLines} />
         </Source>
         <Source

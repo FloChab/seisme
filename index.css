@@ -1,0 +1,13 @@
+.custom-card {
+  padding: 0; /* Supprime le padding autour du contenu */
+  /* Autres styles personnalisés pour la carte */
+}
+#root {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+}
+#custom {
+  padding-left : 0px;
+  padding-right : 0px;
+}
